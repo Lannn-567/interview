@@ -1,0 +1,11 @@
+body { background: #f1f4f7; min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: sans-serif; }
+.glass-container { background: white; width: 90%; max-width: 500px; padding: 40px; border-radius: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; }
+.avatar-circle { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: -100px auto 20px; border: 8px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.avatar-circle img { width: 100%; height: 100%; object-fit: cover; }
+h2 { color: #5b7083; margin-bottom: 5px; }
+.tag { color: #d4a373; font-weight: bold; margin-bottom: 20px; }
+.skill-tags { margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.skill-tags span { background: #e3eaf0; color: #7a8c99; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+.quote { font-style: italic; color: #999; border-top: 1px solid #eee; padding-top: 20px; margin-top: 20px; }
+.btn-back { display: inline-block; margin-top: 30px; text-decoration: none; color: #d4a373; border: 2px solid #d4a373; padding: 10px 25px; border-radius: 50px; transition: 0.3s; }
+.btn-back:hover { background: #d4a373; color: white; }

@@ -1,0 +1,168 @@
+/* 基礎設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #f1f4f7;
+    color: #333;
+}
+
+.resume-wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 80vh;
+}
+
+/* 左側邊欄 - 調整排版架構 */
+.sidebar {
+    width: 35%;
+    background-color: #5b7083; /* 灰藍色背景 */
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content 改為不強制均分，讓照片與文字有獨立位置 */
+}
+
+/* --- 新加入的照片區塊樣式 --- */
+.profile-photo-area {
+    margin-bottom: 30px; /* 與下方個人檔案標題的距離 */
+    text-align: center; /* 讓 placeholder 在中間 */
+}
+
+.photo-placeholder {
+    width: 200px; /* 設定照片圓圈的大小 */
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.1); /* 預留位置的淡色背景 */
+    border-radius: 50%; /* 圓形 */
+    border: 5px solid rgba(255, 255, 255, 0.3); /* 金屬邊框 */
+    margin: 0 auto;
+    overflow: hidden; /* 確保照片裁切成圓形 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保圖片不變形填滿圓圈 */
+    object-position: center; /* 圖片中心點對齊 */
+}
+/* -------------------------- */
+
+/* 將資料文字組成一組，與底部按鈕分開 */
+.sidebar-info-group {
+    flex-grow: 1; /* 讓資料文字區塊佔用剩下的空間 */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+    margin: 0 0 30px; /* 移除了上 margin */
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.info-item {
+    margin-bottom: 25px;
+}
+
+.info-item label {
+    display: block;
+    font-size: 0.8rem;
+    color: #d4a373; /* 金橘色 label */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.btn-home {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: 30px; /* 與上方資料文字的距離 */
+}
+
+.btn-home:hover {
+    background: #d4a373;
+    border-color: #d4a373;
+}
+
+/* 右側本文 */
+.main-content {
+    width: 65%;
+    padding: 60px;
+    background: white;
+}
+
+.bio-section h1 {
+    font-size: 2.2rem;
+    color: #5b7083;
+    margin: 0;
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    background: #d4a373;
+    margin: 20px 0 40px;
+}
+
+.bio-section h3 {
+    color: #d4a373;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+.bio-section p {
+    line-height: 2;
+    text-align: justify;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.motto-box {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fdfaf6;
+    border-left: 5px solid #d4a373;
+    font-style: italic;
+    color: #888;
+}
+
+/* 響應式：手機版改為上下排列 */
+@media (max-width: 768px) {
+    .resume-wrapper {
+        flex-direction: column;
+        margin: 20px;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+    .sidebar {
+        padding: 30px;
+    }
+    .profile-photo-area {
+        margin-top: 30px; /* 手機版加上 margin */
+    }
+}

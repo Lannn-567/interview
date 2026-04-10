@@ -1,0 +1,9 @@
+body { background: #e3eaf0; padding: 50px 20px; font-family: sans-serif; }
+.container { max-width: 800px; margin: auto; }
+header { text-align: center; margin-bottom: 50px; }
+h1 { color: #5b7083; font-size: 2rem; }
+.job-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.job-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.highlight { border-left: 6px solid #d4a373; }
+.floating-back { display: inline-block; margin-top: 40px; text-decoration: none; color: #7a8c99; font-weight: bold; }
+@media (max-width: 600px) { .job-grid { grid-template-columns: 1fr; } }
